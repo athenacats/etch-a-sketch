@@ -14,6 +14,7 @@ row1. appendChild(col1)
 document.createElement(rowx) appended to div
 document.createElement(colx)appended to rowx */
 
+//ask for prompt and convert it to number, if not a number, reload the screen//
 let userInput = prompt('Pick a number')
 let colRow = parseInt(userInput);
 console.log(Number.isInteger(colRow))
@@ -22,9 +23,10 @@ if (Number.isInteger(colRow) === true) {
     console.log(colRow)
 }else {
     alert('That is not a number')
-    window.location.reload();
-    
+    window.location.reload();   
 }
+
+//create a loop that creates rows and columns
 
 
 
