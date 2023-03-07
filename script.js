@@ -2,14 +2,6 @@ const div = document.createElement('div')
 div.classList.add('container')
 document.body.appendChild(div)
 
-const row1 = document.createElement('div')
-row1.classList.add('row1');
-div. appendChild(row1)
-
-const col1 = document.createElement('div')
-col1.classList.add('col1');
-row1. appendChild(col1)
-
 /* if user inputs number x, 
 document.createElement(rowx) appended to div
 document.createElement(colx)appended to rowx */
@@ -27,6 +19,19 @@ if (Number.isInteger(colRow) === true) {
 }
 
 //create a loop that creates rows and columns
+
+for (i = 0; i < colRow; i++) {
+    const row = document.createElement('div')
+    row.classList.add('row');
+    for (j = 0; j < colRow; j++) {
+        const col = document.createElement('div')
+        col.classList.add('col');
+        row.appendChild(col)
+    }
+    div.appendChild(row) 
+}
+
+
 
 
 
