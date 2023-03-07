@@ -2,9 +2,10 @@ const div = document.createElement('div')
 div.classList.add('container')
 document.body.appendChild(div)
 
+//this creates the button
 const button = document.createElement('button')
 button.classList.add('button')
-div.appendChild(button)
+document.body.insertBefore(button, div)
 button.innerText = 'Press This To Set Your Field Size'
 button.onclick = function () {
 
