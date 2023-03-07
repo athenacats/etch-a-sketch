@@ -21,3 +21,7 @@ row1. appendChild(col3)
 const col4 = document.createElement('div')
 col4.classList.add('col4');
 row1. appendChild(col4)
+
+const row2 = document.createElement('div')
+row2.classList.add('row2');
+div. appendChild(row2)
