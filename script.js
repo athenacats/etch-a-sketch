@@ -10,6 +10,25 @@ const col1 = document.createElement('div')
 col1.classList.add('col1');
 row1. appendChild(col1)
 
+/* if user inputs number x, 
+document.createElement(rowx) appended to div
+document.createElement(colx)appended to rowx */
+
+let userInput = prompt('Pick a number')
+let colRow = parseInt(userInput);
+console.log(Number.isInteger(colRow))
+
+if (Number.isInteger(colRow) === true) {
+    console.log(colRow)
+}else {
+    alert('That is not a number')
+    window.location.reload();
+    
+}
+
+
+
+
 
 
 
@@ -40,4 +59,4 @@ row1. appendChild(col4)
 
 const row2 = document.createElement('div')
 row2.classList.add('row2');
-div. appendChild(row2)
+div. appendChild(row2)*/
