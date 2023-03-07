@@ -2,29 +2,36 @@ const div = document.createElement('div')
 div.classList.add('container')
 document.body.appendChild(div)
 
-/* if user inputs number x, 
-document.createElement(rowx) appended to div
-document.createElement(colx)appended to rowx */
+const button = document.createElement('button')
+button.classList.add('button')
+div.appendChild(button)
+button.innerText = 'Press This To Set Your Field Size'
+button.onclick = function () {
 
-//ask for prompt and convert it to number, if not a number, reload the screen//
-let userInput = prompt('Pick a number')
-let colRow = parseInt(userInput);
-//console.log(Number.isInteger(colRow))
+    /* if user inputs number x, 
+    document.createElement(rowx) appended to div
+    document.createElement(colx)appended to rowx */
 
-if (Number.isInteger(colRow) === true) {
-    for (i = 0; i < colRow; i++) {
-        const row = document.createElement('div')
-        row.classList.add('row');
-        for (j = 0; j < colRow; j++) {
-            const col = document.createElement('div')
-            col.classList.add('col');
-            row.appendChild(col)
+    //ask for prompt and convert it to number, if not a number, reload the screen//
+    let userInput = prompt('Pick a number')
+    let colRow = parseInt(userInput);
+    //console.log(Number.isInteger(colRow))
+
+    if (Number.isInteger(colRow) === true) {
+        for (i = 0; i < colRow; i++) {
+            const row = document.createElement('div')
+            row.classList.add('row');
+            for (j = 0; j < colRow; j++) {
+                const col = document.createElement('div')
+                col.classList.add('col');
+                row.appendChild(col)
+            }
+            div.appendChild(row) 
         }
-        div.appendChild(row) 
+    }else {
+        alert('That is not a number')
+        window.location.reload();   
     }
-}else {
-    alert('That is not a number')
-    window.location.reload();   
 }
 
 //create a loop that creates rows and columns
