@@ -10,6 +10,22 @@ const col1 = document.createElement('div')
 col1.classList.add('col1');
 row1. appendChild(col1)
 
+
+
+
+
+
+
+
+
+/*const row1 = document.createElement('div')
+row1.classList.add('row1');
+div. appendChild(row1)
+
+const col1 = document.createElement('div')
+col1.classList.add('col1');
+row1. appendChild(col1)
+
 const col2 = document.createElement('div')
 col2.classList.add('col2');
 row1. appendChild(col2)
