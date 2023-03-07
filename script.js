@@ -9,10 +9,19 @@ document.createElement(colx)appended to rowx */
 //ask for prompt and convert it to number, if not a number, reload the screen//
 let userInput = prompt('Pick a number')
 let colRow = parseInt(userInput);
-console.log(Number.isInteger(colRow))
+//console.log(Number.isInteger(colRow))
 
 if (Number.isInteger(colRow) === true) {
-    console.log(colRow)
+    for (i = 0; i < colRow; i++) {
+        const row = document.createElement('div')
+        row.classList.add('row');
+        for (j = 0; j < colRow; j++) {
+            const col = document.createElement('div')
+            col.classList.add('col');
+            row.appendChild(col)
+        }
+        div.appendChild(row) 
+    }
 }else {
     alert('That is not a number')
     window.location.reload();   
@@ -20,7 +29,7 @@ if (Number.isInteger(colRow) === true) {
 
 //create a loop that creates rows and columns
 
-for (i = 0; i < colRow; i++) {
+/*for (i = 0; i < colRow; i++) {
     const row = document.createElement('div')
     row.classList.add('row');
     for (j = 0; j < colRow; j++) {
@@ -29,7 +38,7 @@ for (i = 0; i < colRow; i++) {
         row.appendChild(col)
     }
     div.appendChild(row) 
-}
+}*/
 
 
 
