@@ -6,7 +6,7 @@ document.body.appendChild(div)
 const button = document.createElement('button')
 button.classList.add('button')
 document.body.insertBefore(button, div)
-button.innerText = 'Press This To Set Your Field Size'
+button.innerText = 'Click Here To Set Your SketchPad Size'
 button.onclick = function () {
 
     /* if user inputs number x, 
@@ -14,7 +14,7 @@ button.onclick = function () {
     document.createElement(colx)appended to rowx */
     button.style.display = 'none'
     //ask for prompt and convert it to number, if not a number, reload the screen//
-    let userInput = prompt('Pick a number')
+    let userInput = prompt('How many units would you like your sketchpad to be? (Max: 100)')
     let colRow = parseInt(userInput);
     //console.log(Number.isInteger(colRow))
 
