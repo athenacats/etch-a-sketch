@@ -12,7 +12,7 @@ button.onclick = function () {
     /* if user inputs number x, 
     document.createElement(rowx) appended to div
     document.createElement(colx)appended to rowx */
-
+    button.style.display = 'none'
     //ask for prompt and convert it to number, if not a number, reload the screen//
     let userInput = prompt('Pick a number')
     let colRow = parseInt(userInput);
