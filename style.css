@@ -47,3 +47,11 @@ body {
     justify-items: flex-start;
     background: #6ed2da;
 }
+
+/*.col:hover {
+    background-color: #214042;
+}*/
+
+.new-color {
+    background-color: #214042;
+}
