@@ -18,7 +18,7 @@ button.onclick = function () {
     let colRow = parseInt(userInput);
     //console.log(Number.isInteger(colRow))
 
-    if (Number.isInteger(colRow) === true) {
+    if (Number.isInteger(colRow) === true && colRow <= 100) {
         for (i = 0; i < colRow; i++) {
             const row = document.createElement('div')
             row.classList.add('row');
@@ -29,6 +29,10 @@ button.onclick = function () {
             }
             div.appendChild(row) 
         }
+    }else if (Number.isInteger(colRow) === true && colRow > 100) {
+        alert('Please choose a number less than 100')
+        window.location.reload();  
+    
     }else {
         alert('That is not a number')
         window.location.reload();   
