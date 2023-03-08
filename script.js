@@ -26,6 +26,9 @@ button.onclick = function () {
                 const col = document.createElement('div')
                 col.classList.add('col');
                 row.appendChild(col)
+                col.addEventListener('mouseover', function () {
+                    this.style.backgroundColor = '#13085e'
+                })
             }
             div.appendChild(row) 
         }
@@ -38,6 +41,7 @@ button.onclick = function () {
         window.location.reload();   
     }
 }
+
 
 //create a loop that creates rows and columns
 
