@@ -1,3 +1,4 @@
+//this container holds the flexbox grid
 const div = document.createElement('div')
 div.classList.add('container')
 document.body.appendChild(div)
@@ -9,30 +10,32 @@ document.body.insertBefore(button, div)
 button.innerText = 'Click Here To Set Your SketchPad Size'
 button.onclick = function () {
 
-    /* if user inputs number x, 
+    /* pseudo: if user inputs number x, 
     document.createElement(rowx) appended to div
     document.createElement(colx)appended to rowx */
-    button.style.display = 'none'
+    
+    button.style.display = 'none' //hides the button 
+    
     //ask for prompt and convert it to number, if not a number, reload the screen//
     let userInput = prompt('How many units would you like your sketchpad to be? (Max: 100)')
-    let colRow = parseInt(userInput);
+    let colRow = parseInt(userInput);   //changes string to number, rounds off
     //console.log(Number.isInteger(colRow))
 
     if (Number.isInteger(colRow) === true && colRow <= 100) {
         for (i = 0; i < colRow; i++) {
-            const row = document.createElement('div')
+            const row = document.createElement('div')   //no matter the number, creates the same number of rows
             row.classList.add('row');
             for (j = 0; j < colRow; j++) {
                 const col = document.createElement('div')
                 col.classList.add('col');
                 row.appendChild(col)
-                col.addEventListener('mouseover', function () {
+                col.addEventListener('mouseover', function () {     //change background color on mouse passing over
                     this.style.backgroundColor = '#13085e'
                 })
             }
             div.appendChild(row) 
         }
-    }else if (Number.isInteger(colRow) === true && colRow > 100) {
+    }else if (Number.isInteger(colRow) === true && colRow > 100) {  //limits it to 100
         alert('Please choose a number less than 100')
         window.location.reload();  
     
@@ -43,18 +46,7 @@ button.onclick = function () {
 }
 
 
-//create a loop that creates rows and columns
 
-/*for (i = 0; i < colRow; i++) {
-    const row = document.createElement('div')
-    row.classList.add('row');
-    for (j = 0; j < colRow; j++) {
-        const col = document.createElement('div')
-        col.classList.add('col');
-        row.appendChild(col)
-    }
-    div.appendChild(row) 
-}*/
 
 
 
