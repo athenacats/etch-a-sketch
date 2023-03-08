@@ -19,9 +19,9 @@ body {
     display: flex;
     justify-content: space-between;
     
-    background: #6ed2da;
-    border-top: 0px solid #152b2c;
-    margin: 0.5px;
+   
+ 
+    margin-top: 0.5px;
     flex: 1 0 auto;
     gap: 0.5px;
 
@@ -41,9 +41,9 @@ body {
 
 .col {
     display: flex;
-    background: #6ed2da;
-    
     flex: 1 0 auto;
     margin: 0.5px;
-    gap: 0.5px;
+    
+    justify-items: flex-start;
+    background: #6ed2da;
 }
