@@ -9,7 +9,7 @@ body {
 .container { 
     display: flex;
     flex-direction: column;
-    width: 100vh;
+    width: 100vh;                   /*limit the size of the grid to be constrained to viewport length*/
     height: 100vh;
     justify-content: space-evenly;
     margin-top: 5px;
@@ -18,40 +18,26 @@ body {
 .row {
     display: flex;
     justify-content: space-between;
-    
-   
- 
     margin-top: 0.5px;
     flex: 1 0 auto;
     gap: 0.5px;
-
 }
 
 .button {
    position: relative;
-   
    padding: 8px;
    display: flex;
    justify-content: center;
-   background-color: rgb(233, 146, 168);
+   background-color: rgb(145, 233, 196);
    border-radius: 8px;
    border: none;
-
+   cursor: pointer;
 }
 
 .col {
     display: flex;
     flex: 1 0 auto;
     margin: 0.5px;
-    
     justify-items: flex-start;
     background: #6ed2da;
-}
-
-/*.col:hover {
-    background-color: #214042;
-}*/
-
-.new-color {
-    background-color: #214042;
 }
